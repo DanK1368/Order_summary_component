@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+$main-font: "Red Hat Display", sans-serif;
+$header: 2rem;
+$text: 1.6rem;
+$header-color: hsl(223, 47%, 23%);
+$text-color: hsl(224, 23%, 55%);
+$membership-bg-color: hsl(225, 100%, 94%);
+$maincard-bg-color: hsl(225, 100%, 98%);
+$btn-color: hsl(245, 75%, 52%);
+$hover-color: hsl(258, 75%, 52%);
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+body {
+  font-family: $main-font;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: $header;
+  color: $header-color;
+}
+
+h2 {
+  font-weight: 700;
+  color: $header-color;
+}
+
+p {
+  font-size: $text;
+  color: $text-color;
+}
+
+a {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: $btn-color;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background: $membership-bg-color;
+}
+
+.wave-decoration {
+  position: absolute;
+}
+
+.main-card-section {
+  @include flex(column, flex-start, center);
+  background: white;
+  height: 55rem;
+  width: 34rem;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.image-container {
+  img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+  }
+  flex: 1 1 5rem;
+}
+
+.text-container {
+  @include flex(column, flex-start, center);
+  flex: 1 1 60rem;
+}
+
+.order-container {
+  @include flex(column, center, center);
+  width: 80%;
+  margin: 0rem auto 0rem auto;
+  text-align: center;
+  h1 {
+    padding: 3rem 0rem 2rem 0rem;
+  }
+  p {
+    line-height: 2.5rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.membership-container {
+  @include flex(row, space-between, center);
+  background: $maincard-bg-color;
+  width: 85%;
+  margin: 0rem auto 0rem auto;
+  padding: 1.5rem;
+  border-radius: 10px;
+
+  .membership-text {
+    transform: translateX(-2.5rem);
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  a:hover {
+    color: $hover-color;
+    text-decoration: none;
+  }
+}
+
+.payment-container {
+  @include flex(column, center, center);
+  padding: 2rem 0rem 3rem 0rem;
+  width: 85%;
+  margin: 0rem auto 0rem auto;
+
+  button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    border-style: none;
+    background: $btn-color;
+    color: $maincard-bg-color;
+    font-weight: 700;
+    &:hover {
+      background: $hover-color;
+      cursor: pointer;
+    }
+  }
+
+  p {
+    font-weight: 700;
+    padding-top: 2rem;
+    &:hover {
+      color: $header-color;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .main-card-section {
+    width: 32rem;
+  }
+}
+@media screen and (min-width: 210px) and (max-width: 376px) {
+  .wave-decoration {
+    display: none;
+  }
+  .mobile-wave-decoration {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 377px) {
+  .mobile-wave-decoration {
+    display: none;
+  }
+  .wave-decoration {
+    position: absolute;
+    top: 0%;
+  }
+}

@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 2rem;
+  color: #1f2f56;
+}
+
+h2 {
+  font-weight: 700;
+  color: #1f2f56;
+}
+
+p {
+  font-size: 1.6rem;
+  color: #7280a7;
+}
+
+a {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #3829e0;
+}
+
+main {
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  background: #e0e8ff;
+}
+
+.wave-decoration {
+  position: absolute;
+}
+
+.main-card-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  height: 55rem;
+  width: 34rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.image-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 5rem;
+          flex: 1 1 5rem;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 60rem;
+          flex: 1 1 60rem;
+}
+
+.order-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  margin: 0rem auto 0rem auto;
+  text-align: center;
+}
+
+.order-container h1 {
+  padding: 3rem 0rem 2rem 0rem;
+}
+
+.order-container p {
+  line-height: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+.membership-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f5f7ff;
+  width: 85%;
+  margin: 0rem auto 0rem auto;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.membership-container .membership-text {
+  -webkit-transform: translateX(-2.5rem);
+          transform: translateX(-2.5rem);
+}
+
+.membership-container .membership-text p {
+  font-size: 1.5rem;
+}
+
+.membership-container a:hover {
+  color: #6029e0;
+  text-decoration: none;
+}
+
+.payment-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 0rem 3rem 0rem;
+  width: 85%;
+  margin: 0rem auto 0rem auto;
+}
+
+.payment-container button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  border-style: none;
+  background: #3829e0;
+  color: #f5f7ff;
+  font-weight: 700;
+}
+
+.payment-container button:hover {
+  background: #6029e0;
+  cursor: pointer;
+}
+
+.payment-container p {
+  font-weight: 700;
+  padding-top: 2rem;
+}
+
+.payment-container p:hover {
+  color: #1f2f56;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 320px) {
+  .main-card-section {
+    width: 32rem;
+  }
+}
+
+@media screen and (min-width: 210px) and (max-width: 376px) {
+  .wave-decoration {
+    display: none;
+  }
+  .mobile-wave-decoration {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 377px) {
+  .mobile-wave-decoration {
+    display: none;
+  }
+  .wave-decoration {
+    position: absolute;
+    top: 0%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
