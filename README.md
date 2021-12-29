@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](/Order_summary_component/images/screenshot.png)
+![](Order_summary_component/images/screenshot.png)
 
 ### Links
 
